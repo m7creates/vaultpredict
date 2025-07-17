@@ -1,0 +1,21 @@
+form .form-section{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.form-section input{
+    border: none;
+    box-shadow: 0 0 4px -2px red;
+
+    /* width: 50%; */
+    flex-grow: 1;
+    margin: .2rem;
+    padding: .4rem;
+}
+
+.form-section input :focus{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 4px -2px green;
+}
