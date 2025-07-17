@@ -3,19 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BETS</title>
+    <title>BETS</title> 
     <link rel="stylesheet" href="./../styles/app.css">
     <link rel="stylesheet" href="./../styles/bets.css">
+
+    <script src="./../js/bets.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <a href="#"><img src="./../assets/logo.png" alt="Logo  "></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Account</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bets</h1>
+        <p>Welcome to the bets page!</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Vault Predict. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
 
 
     <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js'
-        // import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js'
-        import { getAuth } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js'
-        import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js'
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyBd9P1vAq6v_DP43W6sZiPn0dWubD6Wgl0",
+            authDomain: "vaultpredict.firebaseapp.com",
+            projectId: "vaultpredict",
+            storageBucket: "vaultpredict.firebasestorage.app",
+            messagingSenderId: "929618756943",
+            appId: "1:929618756943:web:394996465541ec5193f13a",
+            measurementId: "G-SETVDNNTE8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
     </script>
 </body>
 </html>

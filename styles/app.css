@@ -1,12 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+
 body {
-    font-family: 'Aleo', sans-serif;
+    font-family: 'Darker Grotesque', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+    color: #085531; font-weight: bold;
+}
+
+button{
+    background-color: #085531;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}button a{color: white; text-decoration: none; font-weight: 400;}
+
 h1, h2, h3 {
     font-family: 'Albert Sans', serif;
 }
+
+/* utility classes */
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.gap1{gap: .4rem;}
+
+.container{padding: 1rem;}
+
+.border1{
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: .4rem;
+}
+
+/* header section */
+.logo{
+    font: bold 1.2rem/1.5 'Albert Sans', serif;
+    position: fixed;
+    bottom: 1rem; left: 1rem;
+}
+.logo img{
+    width: auto;
+    height: 4.8rem;
+}
+
+/* header a{
+    text-decoration: none;
+    color: indianred;
+    text-transform: uppercase;
+    font-family: 'Albert Sans', serif;
+}
+
+
+
+header ul{
+    list-style: none;
+    gap: 1rem;
+} */

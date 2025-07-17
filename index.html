@@ -8,7 +8,124 @@
     <link rel="stylesheet" href="./../styles/home.css">
 </head>
 <body>
-    <h3>Home Page</h3>
-    <p>Welcome to Vault Predict, your go-to platform for predictive analytics and insights.</p>
+    <header>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <!--
+                A fake / hidden checkbox is used as click reciever,
+                so you can use the :checked selector on it.
+                -->
+                <input type="checkbox" id="menuCheckbox" />
+                
+                <!--
+                Some spans to act as a hamburger.
+                
+                They are acting like a real hamburger,
+                not that McDonalds stuff.
+                -->
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                <!--
+                Too bad the menu has to be inside of the button
+                but hey, it's pure CSS magic.
+                -->
+                <ul id="menu">
+                <!-- 
+                We can use a label here to close upon click (when doing same page navigation), this
+                does require a slight bit of JS.
+                -->
+                <li>
+                    <a href="#about">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
+                    </a>
+                </li>
+                
+                <!-- These just close the menu -->
+                <li><label for="menuCheckbox"><a>Bet</a></label></li>
+                <li><label for="menuCheckbox"><a>Account</a></label></li>
+                
+                <!-- Or just use regular URLs -->
+                <li>
+                    <a href="https://erikterwan.com/" target="_blank">Show me more</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="logo">
+            <a class="flex gap1" href="./../index.html">
+                <img src="./assets/vaultpredict.png" alt="Vault Predict Logo" /> 
+                Vault<br>Predict
+            </a>
+        </div>
+    </header>
+    <main>
+        <article class="intro">
+            <p>
+                Unlock your potential with expert football betting tips and accumulator strategies—perfect for those ready to turn betting into a rewarding part-time pursuit. Maximize your wins, minimize your risks, and make every match count!
+            </p>
+            <h3>
+                VaultPredict is here to stay.
+            </h3>
+        </article>
+        
+        <section class="call-to-action">
+            <p class="highlight">For as low as <strong>10,000 Ugx / week get premium tips</strong> that will get you accumlating your wins. </p>
+            <p><a href="#about">Learn more</a> the proscess before you invest win us. Remember to follow instructions to the word.</p>
+            <button><a href="./pages/bets.html">Get Started</a></button>
+        </section>
+        
+        <section class="container team">
+            <p>
+                Meet our talented team: Falcon, Cipher, Nova, and Echo. For safety, we use code names. Contact or appreciate us—your support empowers our mission and protects our creativity. United by passion, we deliver reliable insights, value your trust, and strive for excellence. Together, we make VaultPredict stronger.
+            </p>
+            <h2>The team behind VaultPredict</h2>
+
+            <div class="team-members flex">
+                <div class="member flex">
+                    <div class="icon">
+                        <img src="./assets/people-icon1.png" alt="">
+                    </div>
+                    <div class="details flex">
+                        <h3>Falcon</h3>
+                        <p>Expert in football analytics and strategy.</p>
+                        <button>Contact</button>
+                    </div>
+                </div>
+                <div class="member flex">
+                    <div class="icon">
+                        <img src="./assets/people-icon2.png" alt="">
+                    </div>
+                    <div class="details flex">
+                        <h3>Echo</h3>
+                        <p>Expert in football analytics and strategy.</p>
+                        <button>Contact</button>
+                    </div>
+                </div>
+                <div class="member flex">
+                    <div class="icon">
+                        <img src="./assets/people-icon3.png" alt="">
+                    </div>
+                    <div class="details flex">
+                        <h3>Cypher</h3>
+                        <p>Expert in football analytics and strategy.</p>
+                        <button>Contact</button>
+                    </div>
+                </div>
+                <div class="member flex">
+                    <div class="icon">
+                        <img src="./assets/people-icon2.png" alt="">
+                    </div>
+                    <div class="details flex">
+                        <h3>Nova</h3>
+                        <p>Expert in football analytics and strategy.</p>
+                        <button>Contact</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
