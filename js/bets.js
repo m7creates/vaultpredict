@@ -17,42 +17,48 @@ measurementId: "G-SETVDNNTE8"
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-async function getDocuments(collectionName) {
-      try {
-        console.log(`Fetching documents from '${collectionName}'...`);
+// async function getDocuments(collectionName) {
+//       try {
+//         // console.log(`Fetching documents from '${collectionName}'...`);
         
-        const querySnapshot = await getDocs(collection(db, collectionName));
+//         const querySnapshot = await getDocs(collection(db, collectionName));
         
-        console.log(`Documents in '${collectionName}':`);
-        querySnapshot.forEach((doc) => {
-          console.log(`${doc.id} =>`, doc.data());
-        });
+//         // console.log(`Documents in '${collectionName}':`);
+//         querySnapshot.forEach((doc) => {
+//           console.log(`${doc.id} =>`, doc.data());
+//         });
         
-        return querySnapshot;
-      } catch (error) {
-        console.error("Error getting documents:", error);
-        throw error;
-      }
-}
+//         return querySnapshot;
+//       } catch (error) {
+//         console.error("Error getting documents:", error);
+//         throw error;
+//       }
+// }
 
-// Example usage
-getDocuments('executives'); // Replace with your collection name
+// // Example usage
+// getDocuments('executives'); // Replace with your collection name
 
-async function addDocument(collectionName, documentData) {
-      try {
-        const docRef = await addDoc(collection(db, collectionName), documentData);
-        console.log(`Document added with ID: ${docRef.id}`);
-        return docRef;
-      } catch (error) {
-        console.error("Error adding document: ", error);
-        throw error;
-      }
-    }
+// async function addDocument(collectionName, documentData) {
+//       try {
+//         const docRef = await addDoc(collection(db, collectionName), documentData);
+//         console.log(`Document added with ID: ${docRef.id}`);
+//         return docRef;
+//       } catch (error) {
+//         console.error("Error adding document: ", error);
+//         throw error;
+//       }
+//     }
 
-    // Example usage
-    const newUser = {
-      name: "John Doe",
-      email: "john@example.com",
-      createdAt: new Date(),
-      isActive: true
-    };
+// const addAdminForm = document.querySelector('.add-user-form')
+
+// addAdminForm.addEventListener('submit', async (event) => {
+//   event.preventDefault();
+
+//   const formData = {
+//     codeName: addAdminForm.elements.codename.value,
+//     personalKey: addAdminForm.elements.personalkey.value,
+//     name: addAdminForm.elements.name.value,
+//   }
+//   console.log("Form submitted", formData);
+// })
+

@@ -1,3 +1,16 @@
+textarea{
+    border-radius: .4rem;
+    outline: solid .5px rgba(0, 0, 0, 0.123);
+    border: none;
+    background-color: #f7fffd;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.2);
+    height: 2rem; width: 64%;
+    padding: .4rem .8rem;
+
+    font: italic 500 1rem "Darker Grotesque", sans-serif;
+    color: #108b8b;
+}
+
 form .form-section{
     display: flex;
     justify-content: flex-end;
@@ -6,7 +19,7 @@ form .form-section{
 
 .form-section input{
     border: none;
-    box-shadow: 0 0 4px -2px red;
+    box-shadow: 0 0 4px -2px #055a4c;
 
     /* width: 50%; */
     flex-grow: 1;
@@ -17,5 +30,15 @@ form .form-section{
 .form-section input :focus{
     outline: none;
     border: none;
-    box-shadow: 0 0 4px -2px green;
+    box-shadow: 0 0 4px -2px #198e92;
+}
+
+img.thumbnail{
+    width: 2rem;
+    height: auto
+}
+
+.complement.flex{
+    align-items: flex-end;
+    gap: 1rem;
 }
