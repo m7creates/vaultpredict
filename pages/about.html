@@ -4,10 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="./../styles/app.css">
-    <link rel="stylesheet" href="./../styles/about.css">
+    <link rel="stylesheet" href="/styles/app.css">
+    <link rel="stylesheet" href="/styles/about.css">
 </head>
 <body>
-    about us
+    <header>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <!-- <input type="checkbox" id="menuCheckbox" /> -->
+                <!-- <span></span>
+                <span></span>
+                <span></span> -->
+                <ul id="menu">
+                    <li><a href="/pages/about.html"><label for="menuCheckbox" onclick="this.parentNode.click();">About</label></a></li>
+                    <li><label for="menuCheckbox"><a href="/pages/bets.html">Bet</a></label></li>
+                    <li><label for="menuCheckbox"><a href="/pages/account.html">Account</a></label></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="logo">
+            <a class="flex gap1" href="/index.html">
+                <img src="/assets/vaultpredict.png" alt="Vault Predict Logo" /> 
+            </a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h3>About Us</h3>
+            <p>
+                Welcome to VaultPredict – where elite football insights meet precision betting. Our team of professional tipsters combines bookmaker  expertise, statistical modeling, and sharp market analysis to deliver  high-probability match predictions. Built by bettors, for bettors.</p>
+            <p class="italic l-border">
+                We do not do guesswork. We merge insider trading knowledge, xG algorithms, and psychological analysis to outsmart  bookmakers. For bettors who treat football markets like a science, not a  lottery.
+            </p>
+        </section>
+
+        <article class="container bg-light-1">
+            <p>
+                Do you have a message for us or an inquiry, send it to us using the form below. We will respond professionally as soon as possible.
+            </p>
+            <form action="" class="l-border">
+                <p>Got something to say, please do. We appreciate your decency and your time plus trust.</p>
+                <input type="text" placeholder="Write your review here..." required class="b-green">
+                <button type="Send"></button>
+            </form>
+        </article>
+
+        <section class="contacts bg-light-1">
+            <p>
+                WHATSAPP, CALL, or EMAIL we git you covered, we respond within 6 hours. Any other means will be communicated here.
+            </p>
+
+            <div class="">
+                <p class="flex"><img src="/assets/whatsapp.svg" alt=""> +256 707744908</p>
+                <p class="flex"><img src="/assets/call.svg" alt=""> +256 123456789</p>
+                <p class="flex"><img src="/assets/email.svg" alt=""> support@vaultpredict.com</p>
+            </div>
+
+            <div class="">
+                <img src="/assets/facebook.svg" alt="">
+                <img src="/assets/x.svg" alt="">
+                <img src="/assets/instagram.svg" alt="">
+                <img src="/assets/wechat.svg" alt="">
+            </div>
+        </section>
+
+        <section>
+            <form action="" id="payment-form" class="container b-green">
+                <label for="period">Select Period</label><select name="period" id="period">
+                    <option value="daily" selected>Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+                <input type="text" disabled value="5,000UgX" />
+                <p><i>You will be notified to confirm payment to <b>vaultpredict</b> investments, confirm with your pin.</i></p>
+
+                <button type="submit">Pay</button>
+            </form>
+        </section>
+
+        <div class="search">
+            <input type="search" name="search" id="search" placeholder="Looking for some thing else...">
+        </div>
+    </main>
 </body>
 </html>

@@ -2,12 +2,80 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
 
+/* SOME COLORS */
+:root {
+  --primary-color: #085531;
+  --secondary-color: #011b0f;
+  --accent-color: #f4f4f4;
+  --text-color: #181717;
+
+  font-size: 16px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
 body {
     font-family: 'Darker Grotesque', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     font-weight: 500;
+}
+
+/* mobile devices */
+@media (max-width: 990px) {
+  html{
+    font-size: 14px;
+  }
+
+  main{
+    width: 100% !important;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  header{
+    background-color: #ececec;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+  
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    padding: 1rem 0 .4rem;
+  }
+
+  header ul{
+    display: none;
+    position: absolute; right: 0;
+    top: 2rem;
+    padding-right: 2rem;
+    background: #dee4e3;
+  }
+
+  header img#menu{
+    height: 2rem;
+    width: auto;
+    margin: 0.8rem;
+    margin-bottom: -3rem;
+  }
+
+  header img{
+    height: 1.2rem; width: auto;
+  }
+
+  #menuToggle{
+    position: initial !important;
+  }
+
+  .logo{
+    position: initial !important;
+  }
 }
 
 main {
@@ -27,136 +95,31 @@ p {
 
 /* Menu code starts here */
 
-#menuToggle
-{
-  display: block;
-  /* You can also use relative/absolute here if you want to stay on the top */
+header nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menuToggle{
   position: fixed;
   top: 50px;
   left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a{
   text-decoration: none;
   color: #232323;
-  
-  transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
+#menuToggle a:hover{
   color: tomato;
 }
 
 
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  max-width: 400px;
-  width: 100vw;
-  max-height: 100vh;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  box-sizing: border-box;
-  overflow-y: auto;
-  background: #ededed;
+#menu{
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li {
@@ -197,7 +160,47 @@ h1, h2, h3 {
     font-family: 'Albert Sans', serif;
 }
 
-/* utility classes */
+input{
+  padding: .4rem 1rem;
+  border-radius: .4rem;
+}
+
+::placeholder{
+  color: #ccc;
+  font-style: italic;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* header section */
+.logo{
+    font: bold 1.2rem/1.5 'Albert Sans', serif;
+    position: fixed;
+    bottom: 1rem; left: 1rem;
+}
+.logo img{
+    width: auto;
+    height: 4.8rem;
+}
+
+
+/* GENERAL USE CLASSES */
+.italic{font-style: italic;}
+
+.l-border{
+  padding-left: 1rem;
+  border-left: 2px solid #011b0f;
+}
+
+.b-green{
+  border: var(--primary-color) solid 1px;
+  background-color: transparent;
+}
+
+.bg-light-1{
+  background-color: #ece9e3;
+}
+
 .flex{
     display: flex;
     align-items: center;
@@ -212,27 +215,3 @@ h1, h2, h3 {
     border-radius: .4rem;
 }
 
-/* header section */
-.logo{
-    font: bold 1.2rem/1.5 'Albert Sans', serif;
-    position: fixed;
-    bottom: 1rem; left: 1rem;
-}
-.logo img{
-    width: auto;
-    height: 4.8rem;
-}
-
-/* header a{
-    text-decoration: none;
-    color: indianred;
-    text-transform: uppercase;
-    font-family: 'Albert Sans', serif;
-}
-
-
-
-header ul{
-    list-style: none;
-    gap: 1rem;
-} */
